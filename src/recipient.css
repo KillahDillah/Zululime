@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    --angle: 90deg;
+}
+
+.img {
+    width: 800px;
+}
+.ray {
+    clip-path:polygon(0% 45%, 100% 0%, 100% 100%, 0% 55%); 
+    transition: 4s;
+    transform: translateY(-50%) translateX(-50%) rotate(var(--angle)) translateY(50%) translateX(50%) translateY(-50%); 
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 500px;
+    height: 100px;
+    background: linear-gradient(0.25turn,rgba(255,255,255,0.7), rgba(255,255,100,0));
+}
+
+.light1 {
+    animation-duration: 10s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+}
+
+.light2 {
+    animation-duration: 7s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+}
+
+.left {
+    left: 20%;
+}
+
+.right {
+    left: 80%
+}
+
+@keyframes wave {
+    0% {
+        --angle: 90deg;
+    }
+
+    50% {
+        --angle: 110deg;
+    }
+    100% {
+        --angle: 60deg;
+    }
+}
