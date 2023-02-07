@@ -1,61 +1,42 @@
-import * as React from "react";
-import type { RouteObject } from "react-router-dom";
-import { Outlet, Link, useRoutes, useParams } from "react-router-dom";
+import * as React from 'react';
+import type { RouteObject } from 'react-router-dom';
+import { Outlet, Link, useRoutes, useParams } from 'react-router-dom';
 
 import Gifter from './Gifter';
 import Recipient from './Recipient';
-import RecipientGiftPreview from './RecipientGiftPreview';
 import RecipientGift from './RecipientGift';
 
-import logo from './logo.svg';
+let routes: RouteObject[] = [
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      {
+        path: '/gifter',
+        element: <Gifter />,
+      },
+      {
+        path: '/recipient',
+        element: <Recipient />,
+      },
+      {
+        path: '/recipient-gift',
+        element: <RecipientGift />,
+      },
+    ],
+  },
+];
 
 const App = () => {
-  let routes: RouteObject[] = [
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { index: true, element: <Home /> },
-        {
-          path: "/gifter",
-          element: <Gifter />,
-        },
-        {
-          path: "/recipient",
-          element: <Recipient/>,
-          // children: [
-          // ]
-        },
-        {
-          path: '/recipient-gift-preview',
-          element: <RecipientGiftPreview/>
-        },
-        {
-          path: '/recipient-gift',
-          element: <RecipientGift/>
-        },
-        // { path: "*", element: <NoMatch /> },
-      ],
-    },
-  ];
-
-  // The useRoutes() hook allows you to define your routes as JavaScript objects
-  // instead of <Routes> and <Route> elements. This is really just a style
-  // preference for those who prefer to not use JSX for their routes config.
   let element = useRoutes(routes);
 
-  return (
-    <main className="w-screen h-screen bg-black flex items-center justify-center flex-col gap-5">
-      <h1 className="text-white text-lg sm:text-4xl">
-        {element}
-      </h1>
-    </main>
-  );
+  return <main>{element}</main>;
 };
 
 function Layout() {
   return (
-    <div>
+    <div style={{height: '100vh'}}>
       <nav>
         <ul>
           <li>
@@ -73,7 +54,7 @@ function Layout() {
         </ul>
       </nav>
 
-      <hr />
+      {/* <hr /> */}
 
       <Outlet />
     </div>
