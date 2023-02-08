@@ -1,4 +1,4 @@
-import './gifter.css';
+
 
 const Gifter = () => {
   return (
