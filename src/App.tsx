@@ -6,6 +6,8 @@ import Gifter from './Gifter';
 import Recipient from './Recipient';
 import RecipientGift from './RecipientGift';
 
+import logo from './assets/Lululemon_logo.png';
+
 let routes: RouteObject[] = [
   {
     path: '/',
@@ -36,26 +38,13 @@ const App = () => {
 
 function Layout() {
   return (
-    <div style={{height: '100vh'}}>
+    <div style={{ height: '100vh' }}>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/gifter">Gifter</Link>
-          </li>
-          <li>
-            <Link to="/recipient">Recipient</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-        </ul>
+        <Link to="/">
+          <img className="logo" src={logo} alt="" />
+        </Link>
       </nav>
-
-      {/* <hr /> */}
-
+      <hr />
       <Outlet />
     </div>
   );
@@ -64,7 +53,17 @@ function Layout() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      <ul>
+        <li>
+          <Link to="/gifter">Gifter</Link>
+        </li>
+        <li>
+          <Link to="/recipient">Recipient</Link>
+        </li>
+        <li>
+          <Link to="/nothing-here">Nothing Here</Link>
+        </li>
+      </ul>
     </div>
   );
 }

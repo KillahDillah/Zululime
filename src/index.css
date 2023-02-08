@@ -8,7 +8,101 @@ html {
   margin: 0;
 }
 
-body, #root {
+body,
+#root {
   height: 100vh;
   width: 100vw;
+  font-family: 'Calibre', 'Helvetica', sans-serif;
+  background-color: #fafafa;
+}
+
+/* LULULEMON STYLES */
+
+/* NAV BAR */
+nav {
+  align-items: center;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  height: 38px;
+  justify-content: center;
+  padding: 35px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+nav > a > .logo {
+  height: 35px;
+}
+
+/* BUTTON */
+.lll-button {
+  background-color: #fff;
+  border: 0.0625rem solid;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lll-button-primary {
+  background-color: #d31334;
+  color: #fff;
+}
+
+/* TEXT */
+.lll-text-xxlarge {
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 92px;
+}
+
+.lll-text-xlarge {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.lll-text-large {
+  font-weight: 600;
+  font-size: 57px;
+  line-height: 56px;
+}
+
+.lll-text-medium {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.lll-text-small {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.lll-text-xsmall {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.lll-text-body-1 {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.landmark {
+  color: #d31334;
 }
