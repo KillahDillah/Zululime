@@ -4,43 +4,43 @@ const Gifter = () => {
   return (
     <main className="w-screen h-screen flex items-center justify-center flex-col gap-5">
       <h2>Confident gift-giving</h2>
-        <form className="w-1/2 m-5">
-          <div className="flex justify-between">
-            <div className="mb-6 w-1/2 mr-3">
-              <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900">First Name</label>
-              <input type="text" id="firstName" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="First Name" required />
-            </div>
-            <div className="mb-6 w-1/2">
-              <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
-              <input type="text" id="lastName" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Last Name" required />
-            </div>
+      <form className="w-1/2 m-5">
+        <div className="flex justify-between">
+          <div className="mb-6 w-1/2 mr-3">
+            <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900">First Name</label>
+            <input type="text" id="firstName" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="First Name" required />
           </div>
-          <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">lululemon account email</label>
-            <input type="email" id="email" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@email.com" required />
+          <div className="mb-6 w-1/2">
+            <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
+            <input type="text" id="lastName" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Last Name" required />
           </div>
-          <div className="flex justify-between">
-            <div className="mb-6 w-1/2 mr-3">
-            <label htmlFor="occasion" className="block mb-2 text-sm font-medium text-gray-900">Occasion</label>
-            <select className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-              <option>Anniversary</option>
-              <option>Birthday</option>
-              <option>Best Friends</option>
-              <option>I Love You</option>
-              <option>Just Because</option>
-            </select>
-              {/* <input type="occasion" id="occasion" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="First Name" required /> */}
-            </div>
-            <div className="mb-6 w-1/4 mr-3">
-              <label htmlFor="priceLow" className="block mb-2 text-sm font-medium text-gray-900">Min Price</label>
-            {/* <span className="currencyinput text-sm">$ */}
-            <input type="text" id="priceLow" name="currency" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Price" required />
-          {/* </span> */}
-            </div>
-            <div className="mb-6 w-1/4">
-              <label htmlFor="priceHigh" className="block mb-2 text-sm font-medium text-gray-900">Max Price</label>
-              <input type="text" id="priceHigh" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Price" required />
-            </div>
+        </div>
+        <div className="mb-6">
+          <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">lululemon account email</label>
+          <input type="email" id="email" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@email.com" required />
+        </div>
+        <div className="flex justify-between">
+          <div className="mb-6 w-1/2 mr-3">
+          <label htmlFor="occasion" className="block mb-2 text-sm font-medium text-gray-900">Occasion</label>
+          <select className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <option>Anniversary</option>
+            <option>Birthday</option>
+            <option>Best Friends</option>
+            <option>I Love You</option>
+            <option>Just Because</option>
+          </select>
+            {/* <input type="occasion" id="occasion" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="First Name" required /> */}
+          </div>
+          <div className="mb-6 w-1/4 mr-3">
+            <label htmlFor="priceLow" className="block mb-2 text-sm font-medium text-gray-900">Min Price</label>
+          {/* <span className="currencyinput text-sm">$ */}
+          <input type="text" id="priceLow" name="currency" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Price" required />
+        {/* </span> */}
+          </div>
+          <div className="mb-6 w-1/4">
+            <label htmlFor="priceHigh" className="block mb-2 text-sm font-medium text-gray-900">Max Price</label>
+            <input type="text" id="priceHigh" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Price" required />
+          </div>
         </div>
         <label className="block mb-2 text-sm font-medium text-gray-900"> Gift Message:
         <textarea id="giftMessage" className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />

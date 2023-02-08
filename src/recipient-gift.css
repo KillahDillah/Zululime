@@ -1,0 +1,49 @@
+.recipient-gift-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.gift-message {
+    max-width: 60%;
+}
+
+.gift-message-title {
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+.gift-message-content {
+    line-height: 2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.03rem;
+    margin: 2rem 0;
+}
+
+.gift-selection {
+    align-items: center;
+}
+
+.gift-selection-title {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.gift-selection-content {
+    display: flex;
+    margin: 2rem 0;
+    gap: 3rem;
+}
+
+.product {
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button {
+    border: 1px solid black;
+}

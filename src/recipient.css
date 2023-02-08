@@ -3,9 +3,37 @@ body {
     --angle: 90deg;
 }
 
-.img {
-    width: 800px;
+.recipient-landing-wrapper {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
+
+img {
+    width: 10rem;
+}
+
+.hero-text {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 7rem;
+  margin: 3rem;
+}
+
+.gift-img {
+  margin: 2rem 0;
+}
+
+.gift-label {
+  font-size: 2rem;
+}
+
+/* body {
+    --angle: 90deg;
+} */
+
 .ray {
     clip-path:polygon(0% 45%, 100% 0%, 100% 100%, 0% 55%); 
     transition: 4s;
@@ -50,3 +78,69 @@ body {
         --angle: 60deg;
     }
 }
+
+/* curtain */
+
+.curtain {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .curtain__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .curtain__wrapper input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  .curtain__wrapper input[type=checkbox]:checked ~ div.curtain__panel--left {
+    transform: translateX(0);
+  }
+  .curtain__wrapper input[type=checkbox]:checked ~ div.curtain__panel--right {
+    transform: translateX(0);
+  }
+  .curtain__panel {
+    display: flex;
+    align-items: center;
+    background: orange;
+    color: #fff;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    transition: all 1s ease-out;
+    z-index: 2;
+  }
+  .curtain__panel--left {
+    justify-content: flex-end;
+    transform: translateX(-100%);
+  }
+  .curtain__panel--right {
+    justify-content: flex-start;
+    transform: translateX(100%);
+  }
+  .curtain__content {
+    align-items: center;
+    background: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding: 1rem 0;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+  }
+  .curtain__content img {
+    width: 20%;
+  }
