@@ -11,23 +11,17 @@ body {
     height: 100%;
 }
 
-img {
+.img {
     width: 10rem;
 }
 
 .hero-text {
-  font-size: 4rem;
   text-align: center;
-  line-height: 7rem;
   margin: 3rem;
 }
 
 .gift-img {
-  margin: 2rem 0;
-}
-
-.gift-label {
-  font-size: 2rem;
+  margin: 4rem 0;
 }
 
 /* body {

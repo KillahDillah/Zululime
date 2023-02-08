@@ -3,8 +3,9 @@ import type { RouteObject } from 'react-router-dom';
 import { Outlet, Link, useRoutes, useParams } from 'react-router-dom';
 
 import Gifter from './Gifter';
-import Recipient from './Recipient';
+import Recipient from './RecipientLanding';
 import RecipientGift from './RecipientGift';
+import RecipientCheckout from './RecipientCheckout';
 
 import logo from './assets/Lululemon_logo.png';
 
@@ -25,6 +26,10 @@ let routes: RouteObject[] = [
       {
         path: '/recipient-gift',
         element: <RecipientGift />,
+      },
+      {
+        path: '/recipient-checkout',
+        element: <RecipientCheckout />,
       },
     ],
   },
