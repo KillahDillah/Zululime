@@ -1,3 +1,8 @@
+body {
+    background-color: white;
+    --angle: 90deg;
+}
+
 .recipient-landing-wrapper {
   display: flex;
     flex-direction: column;
