@@ -43,7 +43,7 @@ const RecipientConfirmation = () => {
         <motion.p variants={line}>Order confirmed</motion.p>
         <motion.p variants={line}>Your gift is on its way</motion.p>
       </motion.div>
-      <Link className="gift-img" to={'/recipient-gift'}>
+      <Link className="gift-img" to={'/gifter-confirmation'}>
         <motion.img
           animate={{
             y: [0, 25, 0],

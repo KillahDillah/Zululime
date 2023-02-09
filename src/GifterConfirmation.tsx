@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './recipient-checkout.css';
 
-const RecipientCheckout = () => {
+const GifterConfirmation = () => {
   const navigate = useNavigate();
   const completeOrder = () => {
     navigate('/recipient-confirmation');
@@ -38,7 +38,7 @@ const RecipientCheckout = () => {
           <div className="main-section">
             <h2 className="lll-text-small">Shipping Address</h2>
             <div className="address-select section-content">
-              <input type="radio" name="address" id="address-1" />
+              {/* <input type="radio" name="address" id="address-1" /> */}
               <div className="full-address">
                 <span>Donovan Allen</span>
                 <span>1234 Yoga Ln</span>
@@ -46,7 +46,7 @@ const RecipientCheckout = () => {
                 <span>(555) 111-1234</span>
               </div>
             </div>
-            <hr />
+            {/* <hr />
             <div className="address-select section-content">
               <input type="radio" name="address" id="address-1" />
               <div className="full-address">
@@ -60,22 +60,22 @@ const RecipientCheckout = () => {
             <div className="address-select section-content">
               <input type="radio" name="address" id="address-1" />
               <p>New shipping address</p>
-            </div>
+            </div> */}
           </div>
 
-          {/* <div className="main-section">
+          <div className="main-section">
             <h2 className="lll-text-small">Shipping & Gift Options</h2>
             <div className="section-content">
               <p>Arrives by:</p>
               <p>Sat, Feb 11</p>
               <p>Standard Shipping (FREE)</p>
             </div>
-          </div> */}
-          <button className='lll-button lll-button-primary' type='submit' onClick={completeOrder}>Complete your order</button>
+          </div>
+          <button className='lll-button lll-button-primary' type='submit' onClick={completeOrder}>Finalize your order</button>
         </div>
 
         <div className="summary">
-          <h2 className="lll-text-small">Gift Summary</h2>
+          <h2 className="lll-text-small">Gift Order Summary</h2>
           <div className="price-line">
             <span className="icon-label">
               <svg
@@ -120,7 +120,7 @@ const RecipientCheckout = () => {
                 ></path>
               </svg>
             </span>
-            <span>GIFT</span>
+            <span>$38.00</span>
           </div>
           <hr />
           <div className="price-line">
@@ -137,14 +137,14 @@ const RecipientCheckout = () => {
                 <span>Size L</span>
                 <div className="price-line">
                   <span>Quantity 1</span>
-                  {/* <span>$38.00</span> */}
+                  <span>$38.00</span>
                 </div>
               </div>
             </div>
-            {/* <span>$100</span> */}
+            <span>$38.00</span>
           </div>
-          {/* <hr /> */}
-          {/* <div className="price-line">
+          <hr />
+          <div className="price-line">
             <span>Subtotal</span>
             <span>$38.00</span>
           </div>
@@ -160,11 +160,11 @@ const RecipientCheckout = () => {
           <div className="price-line">
             <span>Order total</span>
             <span>USD$41.14</span>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default RecipientCheckout;
+export default GifterConfirmation;
