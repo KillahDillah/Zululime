@@ -3,6 +3,7 @@ import type { RouteObject } from 'react-router-dom';
 import { Outlet, Link, useRoutes, useParams } from 'react-router-dom';
 
 import Gifter from './Gifter';
+import GifterCheckout from './GifterCheckout';
 import Recipient from './RecipientLanding';
 import RecipientGift from './RecipientGift';
 import RecipientCheckout from './RecipientCheckout';
@@ -19,6 +20,10 @@ let routes: RouteObject[] = [
       {
         path: '/gifter',
         element: <Gifter />,
+      },
+      {
+        path: '/gifter-checkout',
+        element: <GifterCheckout />,
       },
       {
         path: '/recipient',
