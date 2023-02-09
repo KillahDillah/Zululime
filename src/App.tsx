@@ -7,6 +7,7 @@ import GifterCheckout from './GifterCheckout';
 import Recipient from './RecipientLanding';
 import RecipientGift from './RecipientGift';
 import RecipientCheckout from './RecipientCheckout';
+import RecipientConfirmation from './RecipientConfirmation';
 
 import logo from './assets/Lululemon_logo.png';
 
@@ -35,6 +36,10 @@ let routes: RouteObject[] = [
       {
         path: '/recipient-checkout',
         element: <RecipientCheckout />,
+      },
+      {
+        path: '/recipient-confirmation',
+        element: <RecipientConfirmation />,
       },
     ],
   },
