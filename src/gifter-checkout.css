@@ -1,0 +1,18 @@
+.theme-image {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-image::before {
+    content: '';
+    background-image: url("https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/658c3ee593205df0b270d8b1b6e227c36d9b387f.jpg?1674791812");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 10%;
+}
