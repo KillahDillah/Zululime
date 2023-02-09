@@ -1,6 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import './recipient-checkout.css';
 
 const RecipientCheckout = () => {
+  const navigate = useNavigate();
+  const completeOrder = () => {
+    navigate('/recipient-confirmation');
+  };
+
   return (
     <div className="checkout-wrapper">
       <h1 className="lll-text-medium title">Checkout</h1>
@@ -65,9 +71,7 @@ const RecipientCheckout = () => {
               <p>Standard Shipping (FREE)</p>
             </div>
           </div>
-          <button className="lll-button lll-button-primary" type="submit">
-            Complete your order
-          </button>
+          <button className='lll-button lll-button-primary' type='submit' onClick={completeOrder}>Complete your order</button>
         </div>
 
         <div className="summary">
