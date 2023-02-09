@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './recipient.css';
+import { useContext } from 'react';
+import { GiftContext } from './GiftContext';
 
 const Recipient = () => {
+  const {giftProfile, setGiftProfile} = useContext(GiftContext);
+  const data: any = giftProfile;
+  
   const text = {
     visible: {
       opacity: 1,
@@ -40,7 +45,7 @@ const Recipient = () => {
         variants={text}
         className="hero-text lll-text-xlarge"
       >
-        <motion.p variants={line}>Hey Leah,</motion.p>
+        <motion.p variants={line}>Hey {data.recFirstName},</motion.p>
         <motion.p variants={line}>Someone thinks you're pretty great!</motion.p>
       </motion.div>
       <Link className="gift-img" to={'/recipient-gift'}>
@@ -59,7 +64,7 @@ const Recipient = () => {
           alt="logo"
         />
       </Link>
-      <p className="gift-label lll-text-small">See what Gifter got for you!</p>
+      <p className="gift-label lll-text-small">See what {data.gifterFirstName} got for you!</p>
     </div>
   );
 };

@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { GiftContext } from './GiftContext';
 import './recipient-checkout.css';
 
 const RecipientCheckout = () => {
+  const {giftProfile, setGiftProfile} = useContext(GiftContext);
+  const data: any = giftProfile;
+
   const navigate = useNavigate();
   const completeOrder = () => {
     navigate('/recipient-confirmation');
@@ -25,6 +30,7 @@ const RecipientCheckout = () => {
                   name="email"
                   id="email"
                   placeholder="test@lululemon.com"
+                  value={data.recEmail}
                 />
                 <span>
                   <input type="checkbox" name="signup" id="signup" /> Sign me up
@@ -40,7 +46,7 @@ const RecipientCheckout = () => {
             <div className="address-select section-content">
               <input type="radio" name="address" id="address-1" />
               <div className="full-address">
-                <span>Donovan Allen</span>
+                <span>{data.recFirstName} {data.recLastName}</span>
                 <span>1234 Yoga Ln</span>
                 <span>Los Angeles, CA 12345, USA</span>
                 <span>(555) 111-1234</span>
@@ -50,7 +56,7 @@ const RecipientCheckout = () => {
             <div className="address-select section-content">
               <input type="radio" name="address" id="address-1" />
               <div className="full-address">
-                <span>Donovan Allen</span>
+                <span>{data.recFirstName} {data.recLastName}</span>
                 <span>1234 Sweater Dr</span>
                 <span>San Diego, CA 12543, USA</span>
                 <span>(555) 111-1234</span>

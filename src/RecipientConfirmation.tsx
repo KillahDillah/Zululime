@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './recipient.css';
+import { useContext } from 'react';
+import { GiftContext } from './GiftContext';
 
 const RecipientConfirmation = () => {
+  const {giftProfile, setGiftProfile} = useContext(GiftContext);
+  const data: any = giftProfile;
+
   const text = {
     visible: {
       opacity: 1,
@@ -59,7 +64,7 @@ const RecipientConfirmation = () => {
           alt="logo"
         />
       </Link>
-      <p className="gift-label lll-text-small">Happy Birthday from Gifter and lululemon!</p>
+      <p className="gift-label lll-text-small">Happy Birthday from {data.gifterFirstName} and lululemon!</p>
     </div>
   );
 };
