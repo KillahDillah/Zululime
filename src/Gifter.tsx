@@ -54,20 +54,20 @@ const Gifter = () => {
 
   return (
     <main className="w-screen h-auto flex items-center justify-center flex-col gap-5">
-      <h2>Confident gift-giving</h2>
+      <h2 className='lll-text-medium title'>Confident gift-giving</h2>
       <form onSubmit={submitForm} className="w-1/2 m-5">
         <div className="flex justify-between">
           <div className="mb-6 w-1/2 mr-3">
             <label
               htmlFor="recFirstName"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Recipient First Name
             </label>
             <input
               type="text"
               name="recFirstName"
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-text-input block w-full"
               placeholder="First Name"
               required
             />
@@ -75,14 +75,14 @@ const Gifter = () => {
           <div className="mb-6 w-1/2">
             <label
               htmlFor="recLastName"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Recipient Last Name
             </label>
             <input
               type="text"
               name="recLastName"
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-text-input block w-full"
               placeholder="Last Name"
               required
             />
@@ -91,7 +91,7 @@ const Gifter = () => {
         <div className="mb-6">
           <label
             htmlFor="recEmail"
-            className="block mb-2 text-sm font-medium text-gray-900"
+            className="lll-text-subtitle"
           >
             Recipient Email <br />
             Enter the email associated with their lululemon account to get
@@ -100,7 +100,7 @@ const Gifter = () => {
           <input
             type="email"
             name="recEmail"
-            className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="lll-text-input block w-full"
             placeholder="name@email.com"
             required
           />
@@ -109,14 +109,14 @@ const Gifter = () => {
           <div className="mb-6 w-1/2 mr-3">
             <label
               htmlFor="occasion"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Occasion
             </label>
             <select
               name="occasion"
               onChange={(e) => setOccasion(e.target.value)}
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-select-input lll-text-body-1 block w-full"
             >
               {occasionOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -129,7 +129,7 @@ const Gifter = () => {
           <div className="mb-6 w-1/4 mr-3">
             <label
               htmlFor="minPrice"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Min Price
             </label>
@@ -137,7 +137,7 @@ const Gifter = () => {
             <input
               type="text"
               name="minPrice"
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-text-input block w-full"
               placeholder="Price"
               required
             />
@@ -146,39 +146,39 @@ const Gifter = () => {
           <div className="mb-6 w-1/4">
             <label
               htmlFor="maxPrice"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Max Price
             </label>
             <input
               type="text"
               name="maxPrice"
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-text-input block w-full"
               placeholder="Price"
               required
             />
           </div>
         </div>
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="lll-text-subtitle">
           {' '}
           Gift Message:
           <textarea
             name="giftMessage"
-            className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="lll-textarea-input block w-full p-2.5"
           />
         </label>
         <div className="flex justify-between">
           <div className="mb-6 w-1/2 mr-3">
             <label
               htmlFor="gifterFirstName"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Your First Name
             </label>
             <input
               type="text"
               name="gifterFirstName"
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-text-input block w-full"
               placeholder="First Name"
               required
             />
@@ -186,14 +186,14 @@ const Gifter = () => {
           <div className="mb-6 w-1/2">
             <label
               htmlFor="gifterLastName"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="lll-text-subtitle"
             >
               Your Last Name
             </label>
             <input
               type="text"
               name="gifterLastName"
-              className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="lll-text-input block w-full"
               placeholder="Last Name"
               required
             />
@@ -202,14 +202,14 @@ const Gifter = () => {
         <div className="mb-6">
           <label
             htmlFor="gifterEmail"
-            className="block mb-2 text-sm font-medium text-gray-900"
+            className="lll-text-subtitle"
           >
             Your Email
           </label>
           <input
             type="email"
             name="gifterEmail"
-            className="border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="lll-text-input block w-full"
             placeholder="name@email.com"
             required
           />
@@ -218,7 +218,7 @@ const Gifter = () => {
         {/* Search */}
         {/* Suggested */}
         <div className="w-1/2">
-          <p className="text-xl">Themes:</p>
+          <p className="lll-text-subtitle">Themes:</p>
           <br />
           <div className="flex justify-between">
             {themes.map((theme) => (
@@ -237,7 +237,7 @@ const Gifter = () => {
           </div>
         </div>
         <div className="w-1/2">
-          <p className="text-xl">Suggested Products:</p>
+          <p className="lll-text-subtitle">Suggested Products:</p>
           <br />
           <div className="flex justify-between">
             <img
@@ -259,7 +259,7 @@ const Gifter = () => {
         </div>
         <button
           type="submit"
-          className="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          className="lll-button lll-button-primary"
         >
           Submit
         </button>

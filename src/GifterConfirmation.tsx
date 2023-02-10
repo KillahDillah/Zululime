@@ -20,7 +20,7 @@ const GifterConfirmation = () => {
                   Email Address (for order notification)
                 </label>
                 <input
-                  className="lll-email-input"
+                  className="lll-text-input"
                   type="email"
                   name="email"
                   id="email"
