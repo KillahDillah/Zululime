@@ -18,7 +18,56 @@ body,
 
 /* LULULEMON STYLES */
 
-.lll-email-input {
+.lll-textarea-input {
+  -webkit-border-image: none;
+-webkit-font-smoothing: antialiased;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+appearance: auto;
+background: rgb(255, 255, 255) none no-repeat scroll right 16px 50% / auto padding-box border-box;
+background-position: right 16px 50%;
+background-repeat: no-repeat;
+border: 1px solid rgb(0, 0, 0);
+border-radius: 4px;
+box-sizing: border-box;
+color: rgb(0, 0, 0);
+cursor: auto;
+display: block;
+flex-flow: column nowrap;
+font: normal normal normal normal 18px/normal Calibre, Verlag, Helvetica, sans-serif;
+font-variant: normal;
+overflow-wrap: break-word;
+padding: 14px 69px 14px 16px;
+place-content: normal flex-start;
+resize: none;
+text-align: start;
+white-space: pre-wrap;
+height: 100px;
+min-height: 52px;
+}
+
+.lll-select-input {
+  -webkit-border-image: none;
+-webkit-font-smoothing: antialiased;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+appearance: auto;
+background: rgb(255, 255, 255) none no-repeat scroll right 44px 50% / auto padding-box border-box;
+background-position: right 44px 50%;
+background-repeat: no-repeat;
+border: 1px solid rgb(0, 0, 0);
+border-radius: 4px;
+box-sizing: border-box;
+display: block;
+font: normal normal normal normal 18px/normal Calibre, Verlag, Helvetica, sans-serif;
+font-variant: normal;
+height: 52px;
+letter-spacing: normal;
+padding: 14px 42px 14px 16px;
+text-align: start;
+}
+
+.lll-text-input {
   background-color: rgb(255, 255, 255);
   background-position-x: right 16px;
   background-position-y: 50%;
@@ -140,6 +189,18 @@ nav > a > .logo {
   font-weight: 400;
   font-size: 19px;
   line-height: 24px;
+}
+
+.lll-text-subtitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.2;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 1rem 0;
 }
 
 .landmark {

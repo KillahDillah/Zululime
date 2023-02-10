@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { GiftContext } from './GiftContext';
 
 import './recipient-gift.css';
 
 const RecipientGiftPreview = () => {
+  const {giftProfile, setGiftProfile} = useContext(GiftContext);
+  const data: any = giftProfile;
+  
   const navigate = useNavigate();
   const [selectedProductIndex, setSelectedProductIndex] = useState(-1);
 
@@ -19,24 +23,16 @@ const RecipientGiftPreview = () => {
   return (
     <div className="recipient-gift-wrapper">
       <div className="gift-message">
-        <h3 className="lll-text-medium">Message from Gifter:</h3>
+        <h3 className="lll-text-medium">Message from {data.gifterFirstName}:</h3>
         <div className="gift-message-content lll-text-body-1">
           <p>
-            I'm baby distillery schlitz normcore 3 wolf moon mukbang tacos pok
-            pok. Sus kogi affogato occupy meditation biodiesel cray microdosing
-            elit anim dolore incididunt. Jianbing scenester glossier craft beer
-            typewriter, ipsum exercitation. Shaman master cleanse portland
-            taxidermy street art. Yr bushwick adipisicing woke quinoa. Dolore
-            fanny pack laborum cardigan cray tote bag beard lumbersexual.
-            Narwhal praxis poutine laboris.
-          </p>
-          <p> Dummy text? More like dummy thicc text, amirite?</p>
+            {data.giftMessage}</p>
         </div>
       </div>
       <div className="gift-selection">
         <p className="lll-text-small">
           Pick out any item below.{' '}
-          <span className="landmark">It's on Gifter!</span>
+          <span className="landmark">It's on {data.gifterFirstName}!</span>
         </p>
         <div className="gift-selection-content">
           <div

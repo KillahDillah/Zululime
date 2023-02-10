@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import type { RouteObject } from 'react-router-dom';
-import { Outlet, Link, useRoutes, useParams } from 'react-router-dom';
+import { Outlet, Link, useRoutes } from 'react-router-dom';
 
 import Gifter from './Gifter';
 import GifterCheckout from './GifterCheckout';
@@ -9,7 +9,10 @@ import RecipientGift from './RecipientGift';
 import RecipientCheckout from './RecipientCheckout';
 import RecipientConfirmation from './RecipientConfirmation';
 
+import { GiftProvider } from './GiftContext';
+
 import logo from './assets/Lululemon_logo.png';
+import GifterConfirmation from './GifterConfirmation';
 
 let routes: RouteObject[] = [
   {
@@ -41,6 +44,10 @@ let routes: RouteObject[] = [
         path: '/recipient-confirmation',
         element: <RecipientConfirmation />,
       },
+      {
+        path: '/gifter-confirmation',
+        element: <GifterConfirmation />,
+      },
     ],
   },
 ];
@@ -48,7 +55,11 @@ let routes: RouteObject[] = [
 const App = () => {
   let element = useRoutes(routes);
 
-  return <main>{element}</main>;
+  return (
+    <GiftProvider>
+      <main>{element}</main>
+    </GiftProvider>
+  );
 };
 
 function Layout() {

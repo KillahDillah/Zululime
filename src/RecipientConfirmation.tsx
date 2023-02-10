@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './recipient.css';
+import { useContext } from 'react';
+import { GiftContext } from './GiftContext';
 
 const RecipientConfirmation = () => {
+  const {giftProfile, setGiftProfile} = useContext(GiftContext);
+  const data: any = giftProfile;
+
   const text = {
     visible: {
       opacity: 1,
@@ -43,7 +48,7 @@ const RecipientConfirmation = () => {
         <motion.p variants={line}>Order confirmed</motion.p>
         <motion.p variants={line}>Your gift is on its way</motion.p>
       </motion.div>
-      <Link className="gift-img" to={'/recipient-gift'}>
+      <Link className="gift-img" to={'/gifter-confirmation'}>
         <motion.img
           animate={{
             y: [0, 25, 0],
@@ -59,7 +64,7 @@ const RecipientConfirmation = () => {
           alt="logo"
         />
       </Link>
-      <p className="gift-label lll-text-small">Happy Birthday from Gifter and lululemon!</p>
+      <p className="gift-label lll-text-small">Happy Birthday from {data.gifterFirstName} and lululemon!</p>
     </div>
   );
 };
