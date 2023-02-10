@@ -53,7 +53,7 @@ const Gifter = () => {
   return (
     <main className="w-screen h-auto flex items-center justify-center flex-col gap-5">
       <h2 className='lll-text-medium title'>Confident gift-giving</h2>
-      <form onSubmit={submitForm} className="w-1/2 m-5">
+      <form onSubmit={submitForm} className="w-1/2 m-5 flex flex-col">
         <div className="flex justify-between">
           <div className="mb-6 w-1/2 mr-3">
             <label
@@ -215,9 +215,8 @@ const Gifter = () => {
         {/* Products */}
         {/* Search */}
         {/* Suggested */}
-        <div className="w-1/2">
-          <p className="lll-text-subtitle">Themes:</p>
-          <br />
+        <div className='mb-6'>
+          <p className="lll-text-subtitle mb-3">Themes:</p>
           <div className="flex justify-between">
             {themes.map((theme) => (
               <button
@@ -234,30 +233,35 @@ const Gifter = () => {
             ))}
           </div>
         </div>
-        <div className="w-1/2">
-          <p className="lll-text-subtitle">Suggested Products:</p>
-          <br />
+        <div className="mb-8">
+          <p className="lll-text-subtitle mb-3">Suggested Products:</p>
           <div className="flex justify-between">
-            <img
-              src="https://images.lululemon.com/is/image/lululemon/LW5CTIS_052871_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"
-              alt="pants"
-              className="h-40 w-40 rounded-sm hover:outline-none hover:ring hover:ring-red-300"
-            />
-            <img
-              src="https://images.lululemon.com/is/image/lululemon/LW5CTIS_052871_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"
-              alt="pants"
-              className="h-40 w-40 rounded-sm hover:outline-none hover:ring hover:ring-red-300"
-            />
-            <img
-              src="https://images.lululemon.com/is/image/lululemon/LW5CTIS_052871_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"
-              alt="pants"
-              className="h-40 w-40 rounded-sm hover:outline-none hover:ring hover:ring-red-300"
-            />
+            <button className="border-none hover:outline-none hover:ring hover:ring-red-300 rounded-sm">
+              <img
+                src="https://images.lululemon.com/is/image/lululemon/LW5CTIS_052871_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"
+                alt="pants"
+                className="h-40 w-40 rounded-sm hover:outline-none hover:ring hover:ring-red-300"
+              />
+            </button>
+            <button className="border-none hover:outline-none hover:ring hover:ring-red-300 rounded-sm">
+              <img
+                src="https://images.lululemon.com/is/image/lululemon/LW5CTIS_052871_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"
+                alt="pants"
+                className="h-40 w-40 rounded-sm hover:outline-none hover:ring hover:ring-red-300"
+                />
+            </button>
+            <button className="border-none hover:outline-none hover:ring hover:ring-red-300 rounded-sm">
+              <img
+                src="https://images.lululemon.com/is/image/lululemon/LW5CTIS_052871_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"
+                alt="pants"
+                className="h-40 w-40 rounded-sm hover:outline-none hover:ring hover:ring-red-300"
+              />
+            </button>
           </div>
         </div>
         <button
           type="submit"
-          className="lll-button lll-button-primary"
+          className="lll-button lll-button-primary w-1/4 m-auto"
         >
           Submit
         </button>
