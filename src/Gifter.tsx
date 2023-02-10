@@ -4,17 +4,14 @@ import { useState } from 'react';
 const Gifter = () => {
 
   const occasionOptions = [
-    {value: 'best_friends', text: 'Best Friends'},
     {value: 'love_you', text: 'I Love You'},
+    {value: 'best_friends', text: 'Best Friends'},
     {value: 'anniversary', text: 'Anniversary'},
     {value: 'birthday', text: 'Birthday'},
     {value: 'other', text: 'Other'},
   ];
 
   const themes = [
-    // { occasion: 'best_friends', id: "BF1", imgSrc: 'https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/7fa17627084a4c67bc8da17db5026b2bbff2e0c4.jpg?1552591908'},
-    // { occasion: 'best_friends', id: "BF2", imgSrc: 'https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/1bca1ca0d5679293ed105404325c473c8a1e3e09.jpg?1631732578'},
-    // { occasion: 'best_friends', id: "BF3", imgSrc: 'https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/5727cde651513974354f86846f094e27d5426ac6.jpg?1669994243' },
     { occasion: 'love_you', id: "Love1", imgSrc:"https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/658c3ee593205df0b270d8b1b6e227c36d9b387f.jpg?1674791812" },
     { occasion: 'love_you', id: "Love2", imgSrc:"https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/e2bd608875a19903079d768c299771553b0220cb.jpg?1673456045" },
     { occasion: 'love_you', id: "Love3", imgSrc:"https://d1i8t2ah6myua2.cloudfront.net/uploads/cards/pictures/cd67f191c59e2846a575f04834dab905fdd04733.jpg?1670600260" },
@@ -27,7 +24,6 @@ const Gifter = () => {
   
   const navigate = useNavigate();
   const submit = () => {
-    console.log(occasion, theme);
     navigate('/gifter-checkout');
   }
 
